@@ -26,5 +26,9 @@ public class Venda extends Operacao {
     public boolean isDevolvido() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+    
+    public void teste() {
+        System.out.println("teste");
+    }
 
 }
