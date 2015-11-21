@@ -57,4 +57,7 @@ public class Aluguel extends Operacao {
         return devolvido;
     }
 
+    public Cliente getCliente() {
+        return cliente;
+    }
 }
