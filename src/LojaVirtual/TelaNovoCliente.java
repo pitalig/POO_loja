@@ -182,6 +182,7 @@ public class TelaNovoCliente extends javax.swing.JInternalFrame {
         } catch (PropertyVetoException ex) {
             Logger.getLogger(TelaNovoCliente.class.getName()).log(Level.SEVERE, null, ex);
         }
+        System.out.println("Cadastrado");
     }//GEN-LAST:event_jButton1ActionPerformed
 
 
