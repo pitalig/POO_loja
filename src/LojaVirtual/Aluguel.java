@@ -56,4 +56,5 @@ public class Aluguel extends Operacao {
     public boolean isDevolvido() {
         return devolvido;
     }
+
 }

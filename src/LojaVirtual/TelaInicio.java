@@ -5,6 +5,7 @@
  */
 package LojaVirtual;
 
+import static java.awt.SystemColor.desktop;
 import java.beans.PropertyVetoException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -12,6 +13,7 @@ import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JInternalFrame;
 import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -279,7 +281,6 @@ public class TelaInicio extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem10ActionPerformed
 
     private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
-        //Dialogo para escolher aluguel
         Icon figura = new ImageIcon (getToolkit().createImage(getClass().getResource("/icons 1/basket_go.png")));
         Object[] possibilities = Operacao.aluguelToObject();
         String s;
@@ -290,15 +291,7 @@ public class TelaInicio extends javax.swing.JFrame {
                 JOptionPane.PLAIN_MESSAGE,
                 figura,
                 possibilities,
-                "");
-        
-        //Descobrir index do aluguel no arraylist operações
-        int index = 0;
-        for (int i = 0; i < Operacao.operacoes.size(); i++) {
-            if (s.contains(String.valueOf(i))) {
-                index = i;
-            }
-        }
+                "Referência");
     }//GEN-LAST:event_jMenuItem5ActionPerformed
 
     /**
