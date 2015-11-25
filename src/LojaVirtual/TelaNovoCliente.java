@@ -8,6 +8,7 @@ package LojaVirtual;
 import java.beans.PropertyVetoException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -168,6 +169,14 @@ public class TelaNovoCliente extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_jFormattedTextField2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+if(jTextField1.getText().equals("")||jTextField2.getText().equals("")||jFormattedTextField1.getText().equals("     -   ")||
+        jFormattedTextField2.getText().equals("   .   .   -  ")||jFormattedTextField3.getText().equals("  /  /    ")||
+        jFormattedTextField4.getText().equals("(  )     -    ")){
+    
+    JOptionPane.showMessageDialog(this,"Favor preencher todos os campos.", "Aviso - Campos Vazios", JOptionPane.WARNING_MESSAGE);
+    
+}else{
+
         String nome, end, cep, fone, cpf, nasc;
         nome = jTextField1.getText();
         end = jTextField2.getText();
@@ -182,7 +191,7 @@ public class TelaNovoCliente extends javax.swing.JInternalFrame {
         } catch (PropertyVetoException ex) {
             Logger.getLogger(TelaNovoCliente.class.getName()).log(Level.SEVERE, null, ex);
         }
-        System.out.println("Cadastrado");
+}
     }//GEN-LAST:event_jButton1ActionPerformed
 
 
