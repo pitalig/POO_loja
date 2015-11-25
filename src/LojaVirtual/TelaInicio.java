@@ -29,6 +29,7 @@ public class TelaInicio extends javax.swing.JFrame {
 
     public TelaInicio() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -77,6 +78,11 @@ public class TelaInicio extends javax.swing.JFrame {
 
         jMenuItem6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons 1/door_out.png"))); // NOI18N
         jMenuItem6.setText("Sair");
+        jMenuItem6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem6ActionPerformed(evt);
+            }
+        });
         jMenu1.add(jMenuItem6);
 
         jMenuBar1.add(jMenu1);
@@ -95,6 +101,11 @@ public class TelaInicio extends javax.swing.JFrame {
 
         jMenuItem4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons 1/user_edit.png"))); // NOI18N
         jMenuItem4.setText("Editar");
+        jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem4ActionPerformed(evt);
+            }
+        });
         jMenu2.add(jMenuItem4);
 
         jMenuItem10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons 1/user_go.png"))); // NOI18N
@@ -300,6 +311,35 @@ public class TelaInicio extends javax.swing.JFrame {
             }
         }
     }//GEN-LAST:event_jMenuItem5ActionPerformed
+
+    private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
+        // TODO add your handling code here:
+        Icon figura = new ImageIcon (getToolkit().createImage(getClass().getResource("/icons 1/basket_go.png")));
+        Object[] possibilities = Operacao.aluguelToObject();
+        String s;
+        s = (String) JOptionPane.showInputDialog(
+                this,
+                "Escolha o cliente:",
+                "Editar Cliente",
+                JOptionPane.PLAIN_MESSAGE,
+                figura,
+                possibilities,
+                "");
+        
+        //Descobrir index do aluguel no arraylist operações
+        /*int index = 0;
+        for (int i = 0; i < Operacao.operacoes.size(); i++) {
+            if (s.contains(String.valueOf(i))) {
+                index = i;
+            }
+        }*/
+        
+    }//GEN-LAST:event_jMenuItem4ActionPerformed
+
+    private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
+        // TODO add your handling code here:
+        System.exit(0);
+    }//GEN-LAST:event_jMenuItem6ActionPerformed
 
     /**
      * @param args the command line arguments
