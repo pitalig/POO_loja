@@ -3,6 +3,7 @@ package LojaVirtual;
 import java.beans.PropertyVetoException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 
 public class TelaNovoCliente extends javax.swing.JInternalFrame {
 
@@ -142,19 +143,28 @@ public class TelaNovoCliente extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        String nome, end, cep, fone, cpf, nasc;
-        nome = jTextField1.getText();
-        end = jTextField2.getText();
-        cep = jFormattedTextField1.getText();
-        fone = jFormattedTextField4.getText();
-        cpf = jFormattedTextField2.getText();
-        nasc = jFormattedTextField3.getText();
-        Cliente c1 = new Cliente(nome, end, cep, fone, cpf, nasc);
-        try {
-            this.setClosed(false);
-            this.setClosed(true);
-        } catch (PropertyVetoException ex) {
-            Logger.getLogger(TelaNovoCliente.class.getName()).log(Level.SEVERE, null, ex);
+        if (jTextField1.getText().equals("") || jTextField2.getText().equals("") || jFormattedTextField1.getText().equals("     -   ")
+                || jFormattedTextField2.getText().equals("   .   .   -  ") || jFormattedTextField3.getText().equals("  /  /    ")
+                || jFormattedTextField4.getText().equals("(  )     -    ")) {
+
+            JOptionPane.showMessageDialog(this, "Favor preencher todos os campos.", "Aviso - Campos Vazios", JOptionPane.WARNING_MESSAGE);
+
+        } else {
+
+            String nome, end, cep, fone, cpf, nasc;
+            nome = jTextField1.getText();
+            end = jTextField2.getText();
+            cep = jFormattedTextField1.getText();
+            fone = jFormattedTextField4.getText();
+            cpf = jFormattedTextField2.getText();
+            nasc = jFormattedTextField3.getText();
+            Cliente c1 = new Cliente(nome, end, cep, fone, cpf, nasc);
+            try {
+                this.setClosed(false);
+                this.setClosed(true);
+            } catch (PropertyVetoException ex) {
+                Logger.getLogger(TelaNovoCliente.class.getName()).log(Level.SEVERE, null, ex);
+            }
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
