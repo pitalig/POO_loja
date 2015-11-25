@@ -5,9 +5,12 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
-public class TelaNovoCliente extends javax.swing.JInternalFrame {
+public class TelaEditarCliente extends javax.swing.JInternalFrame {
 
-    public TelaNovoCliente() {
+    private final Cliente c;
+
+    public TelaEditarCliente(Cliente c) {
+        this.c = c;
         initComponents();
     }
 
@@ -34,7 +37,11 @@ public class TelaNovoCliente extends javax.swing.JInternalFrame {
 
         jLabel1.setText("Nome");
 
+        jTextField1.setText(c.getNome());
+
         jLabel2.setText("Endereço");
+
+        jTextField2.setText(c.getEndereco());
 
         jLabel3.setText("CEP");
 
@@ -43,6 +50,7 @@ public class TelaNovoCliente extends javax.swing.JInternalFrame {
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
+        jFormattedTextField1.setText(c.getCep());
 
         jLabel4.setText("CPF");
 
@@ -51,6 +59,7 @@ public class TelaNovoCliente extends javax.swing.JInternalFrame {
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
+        jFormattedTextField2.setText(c.getCpf());
 
         jLabel5.setText("Data de nascimento");
 
@@ -59,6 +68,7 @@ public class TelaNovoCliente extends javax.swing.JInternalFrame {
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
+        jFormattedTextField3.setText(c.getDataNasc());
 
         jLabel6.setText("Celular");
 
@@ -67,8 +77,9 @@ public class TelaNovoCliente extends javax.swing.JInternalFrame {
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
+        jFormattedTextField4.setText(c.getTelefone());
 
-        jButton1.setText("Cadatrar");
+        jButton1.setText("Salvar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -146,20 +157,17 @@ public class TelaNovoCliente extends javax.swing.JInternalFrame {
             JOptionPane.showMessageDialog(this, "Favor preencher todos os campos.", "Aviso - Campos Vazios", JOptionPane.WARNING_MESSAGE);
 
         } else {
-
-            String nome, end, cep, fone, cpf, nasc;
-            nome = jTextField1.getText();
-            end = jTextField2.getText();
-            cep = jFormattedTextField1.getText();
-            fone = jFormattedTextField4.getText();
-            cpf = jFormattedTextField2.getText();
-            nasc = jFormattedTextField3.getText();
-            Cliente c1 = new Cliente(nome, end, cep, fone, cpf, nasc);
+            c.setNome(jTextField1.getText());
+            c.setEndereco(jTextField2.getText());
+            c.setCep(jFormattedTextField1.getText());
+            c.setTelefone(jFormattedTextField4.getText());
+            c.setCpf(jFormattedTextField2.getText());
+            c.setDataNasc(jFormattedTextField3.getText());
             try {
                 this.setClosed(false);
                 this.setClosed(true);
             } catch (PropertyVetoException ex) {
-                Logger.getLogger(TelaNovoCliente.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(TelaEditarCliente.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
     }//GEN-LAST:event_jButton1ActionPerformed

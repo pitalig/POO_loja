@@ -13,7 +13,7 @@ public class TelaInicio extends javax.swing.JFrame {
     Produto p1 = new Produto("1", 10.99);
     Produto p2 = new Produto("2", 160.50);
     Produto p3 = new Produto("3", 1.99);
-    Cliente c1 = new Cliente("João", "Avenida dos Estados, 19745, São Paulo - SP0000000000000000000000000000000000000000", "02113500", "999558877", "98758936584", "29051990");
+    Cliente c1 = new Cliente("João", "Avenida dos Estados, 19745, São Paulo - SP0000000000000000000000000000000000000000", "02113500", "11999558877", "98758936584", "29051990");
 
     public TelaInicio() {
         initComponents();
@@ -30,7 +30,7 @@ public class TelaInicio extends javax.swing.JFrame {
         jMenuItemSair = new javax.swing.JMenuItem();
         jMenuCliente = new javax.swing.JMenu();
         jMenuItemNovoCliente = new javax.swing.JMenuItem();
-        jMenuItemEdutarCliente = new javax.swing.JMenuItem();
+        jMenuItemEditarCliente = new javax.swing.JMenuItem();
         jMenuItemListaCliente = new javax.swing.JMenuItem();
         jMenuVenda = new javax.swing.JMenu();
         jMenuItemNovaVenda = new javax.swing.JMenuItem();
@@ -82,14 +82,14 @@ public class TelaInicio extends javax.swing.JFrame {
         });
         jMenuCliente.add(jMenuItemNovoCliente);
 
-        jMenuItemEdutarCliente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons 1/user_edit.png"))); // NOI18N
-        jMenuItemEdutarCliente.setText("Editar");
-        jMenuItemEdutarCliente.addActionListener(new java.awt.event.ActionListener() {
+        jMenuItemEditarCliente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons 1/user_edit.png"))); // NOI18N
+        jMenuItemEditarCliente.setText("Editar");
+        jMenuItemEditarCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItemEdutarClienteActionPerformed(evt);
+                jMenuItemEditarClienteActionPerformed(evt);
             }
         });
-        jMenuCliente.add(jMenuItemEdutarCliente);
+        jMenuCliente.add(jMenuItemEditarCliente);
 
         jMenuItemListaCliente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons 1/user_go.png"))); // NOI18N
         jMenuItemListaCliente.setText("Lista");
@@ -199,26 +199,26 @@ public class TelaInicio extends javax.swing.JFrame {
 
     private void jMenuItemNovaVendaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemNovaVendaActionPerformed
         disposeAll();
-        TelaNovoVenda venda = new TelaNovoVenda();
-        jDesktopPane1.add(venda);
+        TelaNovoVenda tela = new TelaNovoVenda();
+        jDesktopPane1.add(tela);
         try {
-            venda.setMaximum(true);
+            tela.setMaximum(true);
         } catch (PropertyVetoException ex) {
             Logger.getLogger(TelaInicio.class.getName()).log(Level.SEVERE, null, ex);
         }
-        venda.setVisible(true);
+        tela.setVisible(true);
     }//GEN-LAST:event_jMenuItemNovaVendaActionPerformed
 
     private void jMenuItemNovoAluguelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemNovoAluguelActionPerformed
         disposeAll();
-        TelaNovoAluguel aluguel = new TelaNovoAluguel();
-        jDesktopPane1.add(aluguel);
+        TelaNovoAluguel tela = new TelaNovoAluguel();
+        jDesktopPane1.add(tela);
         try {
-            aluguel.setMaximum(true);
+            tela.setMaximum(true);
         } catch (PropertyVetoException ex) {
             Logger.getLogger(TelaInicio.class.getName()).log(Level.SEVERE, null, ex);
         }
-        aluguel.setVisible(true);
+        tela.setVisible(true);
     }//GEN-LAST:event_jMenuItemNovoAluguelActionPerformed
 
     private void jMenuVendaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuVendaActionPerformed
@@ -231,50 +231,50 @@ public class TelaInicio extends javax.swing.JFrame {
 
     private void jMenuItemAdicionarProdutoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemAdicionarProdutoActionPerformed
         disposeAll();
-        TelaNovoProduto prod = new TelaNovoProduto();
-        jDesktopPane1.add(prod);
+        TelaNovoProduto tela = new TelaNovoProduto();
+        jDesktopPane1.add(tela);
         try {
-            prod.setMaximum(true);
+            tela.setMaximum(true);
         } catch (PropertyVetoException ex) {
             Logger.getLogger(TelaInicio.class.getName()).log(Level.SEVERE, null, ex);
         }
-        prod.setVisible(true);
+        tela.setVisible(true);
     }//GEN-LAST:event_jMenuItemAdicionarProdutoActionPerformed
 
     private void jMenuItemListaProdutoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemListaProdutoActionPerformed
         disposeAll();
-        TelaListaProduto lista = new TelaListaProduto();
-        jDesktopPane1.add(lista);
+        TelaListaProduto tela = new TelaListaProduto();
+        jDesktopPane1.add(tela);
         try {
-            lista.setMaximum(true);
+            tela.setMaximum(true);
         } catch (PropertyVetoException ex) {
             Logger.getLogger(TelaInicio.class.getName()).log(Level.SEVERE, null, ex);
         }
-        lista.setVisible(true);
+        tela.setVisible(true);
     }//GEN-LAST:event_jMenuItemListaProdutoActionPerformed
 
     private void jMenuItemNovoClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemNovoClienteActionPerformed
         disposeAll();
-        TelaNovoCliente cliente = new TelaNovoCliente();
-        jDesktopPane1.add(cliente);
+        TelaNovoCliente tela = new TelaNovoCliente();
+        jDesktopPane1.add(tela);
         try {
-            cliente.setMaximum(true);
+            tela.setMaximum(true);
         } catch (PropertyVetoException ex) {
             Logger.getLogger(TelaInicio.class.getName()).log(Level.SEVERE, null, ex);
         }
-        cliente.setVisible(true);
+        tela.setVisible(true);
     }//GEN-LAST:event_jMenuItemNovoClienteActionPerformed
 
     private void jMenuItemListaClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemListaClienteActionPerformed
         disposeAll();
-        TelaListaCliente lista = new TelaListaCliente();
-        jDesktopPane1.add(lista);
+        TelaListaCliente tela = new TelaListaCliente();
+        jDesktopPane1.add(tela);
         try {
-            lista.setMaximum(true);
+            tela.setMaximum(true);
         } catch (PropertyVetoException ex) {
             Logger.getLogger(TelaInicio.class.getName()).log(Level.SEVERE, null, ex);
         }
-        lista.setVisible(true);
+        tela.setVisible(true);
     }//GEN-LAST:event_jMenuItemListaClienteActionPerformed
 
     private void jMenuItemDevolucaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemDevolucaoActionPerformed
@@ -292,16 +292,16 @@ public class TelaInicio extends javax.swing.JFrame {
                 possibilities,
                 "");
 
-        //Descobrir index do aluguel no arraylist operações
-        int index = 0;
+        //Pegar aluguel no arraylist operações
+        Aluguel a;
         for (int i = 0; i < Operacao.operacoes.size(); i++) {
             if (s.contains(String.valueOf(i))) {
-                index = i;
+                a = (Aluguel) Operacao.operacoes.get(i);
             }
         }
     }//GEN-LAST:event_jMenuItemDevolucaoActionPerformed
 
-    private void jMenuItemEdutarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemEdutarClienteActionPerformed
+    private void jMenuItemEditarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemEditarClienteActionPerformed
         disposeAll();
         // Dialogo para escolher cliente
         Icon figura = new ImageIcon(getToolkit().createImage(getClass().getResource("/icons 1/user_edit.png")));
@@ -315,7 +315,23 @@ public class TelaInicio extends javax.swing.JFrame {
                 figura,
                 possibilities,
                 "");
-    }//GEN-LAST:event_jMenuItemEdutarClienteActionPerformed
+        //Pegar cliente no arraylist clientes
+        Cliente c = null;
+        for (Cliente cliente : Cliente.clientes) {
+            if (s.equals(cliente.getNome())) {
+                c = cliente;
+            }
+        }
+        disposeAll();
+        TelaEditarCliente tela = new TelaEditarCliente(c);
+        jDesktopPane1.add(tela);
+        try {
+            tela.setMaximum(true);
+        } catch (PropertyVetoException ex) {
+            Logger.getLogger(TelaInicio.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        tela.setVisible(true);
+    }//GEN-LAST:event_jMenuItemEditarClienteActionPerformed
 
     private void jMenuItemSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemSairActionPerformed
         System.exit(0);
@@ -384,8 +400,8 @@ public class TelaInicio extends javax.swing.JFrame {
     private javax.swing.JMenu jMenuCliente;
     private javax.swing.JMenuItem jMenuItemAdicionarProduto;
     private javax.swing.JMenuItem jMenuItemDevolucao;
+    private javax.swing.JMenuItem jMenuItemEditarCliente;
     private javax.swing.JMenuItem jMenuItemEditarProduto;
-    private javax.swing.JMenuItem jMenuItemEdutarCliente;
     private javax.swing.JMenuItem jMenuItemListaCliente;
     private javax.swing.JMenuItem jMenuItemListaProduto;
     private javax.swing.JMenuItem jMenuItemNovaVenda;
