@@ -37,7 +37,7 @@ public class Produto {
         quantidadeEstoque -= quantidade;
     }
 
-    public static Object[] produtosToObject() {
+    public static Object[] toObject() {
         Object[] prod = new Object[produtos.size()];
         for (int i = 0; i < produtos.size(); i++) {
             prod[i] = produtos.get(i).nome;

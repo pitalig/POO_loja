@@ -26,21 +26,21 @@ public class TelaInicio extends javax.swing.JFrame {
 
         jDesktopPane1 = new javax.swing.JDesktopPane();
         jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu1 = new javax.swing.JMenu();
-        jMenuItem6 = new javax.swing.JMenuItem();
-        jMenu2 = new javax.swing.JMenu();
-        jMenuItem3 = new javax.swing.JMenuItem();
-        jMenuItem4 = new javax.swing.JMenuItem();
-        jMenuItem10 = new javax.swing.JMenuItem();
-        jMenu3 = new javax.swing.JMenu();
-        jMenuItem1 = new javax.swing.JMenuItem();
-        jMenu4 = new javax.swing.JMenu();
-        jMenuItem2 = new javax.swing.JMenuItem();
-        jMenuItem5 = new javax.swing.JMenuItem();
-        jMenu5 = new javax.swing.JMenu();
-        jMenuItem7 = new javax.swing.JMenuItem();
-        jMenuItem8 = new javax.swing.JMenuItem();
-        jMenuItem9 = new javax.swing.JMenuItem();
+        jMenuArquivo = new javax.swing.JMenu();
+        jMenuItemSair = new javax.swing.JMenuItem();
+        jMenuCliente = new javax.swing.JMenu();
+        jMenuItemNovoCliente = new javax.swing.JMenuItem();
+        jMenuItemEdutarCliente = new javax.swing.JMenuItem();
+        jMenuItemListaCliente = new javax.swing.JMenuItem();
+        jMenuVenda = new javax.swing.JMenu();
+        jMenuItemNovaVenda = new javax.swing.JMenuItem();
+        jMenuAluguel = new javax.swing.JMenu();
+        jMenuItemNovoAluguel = new javax.swing.JMenuItem();
+        jMenuItemDevolucao = new javax.swing.JMenuItem();
+        jMenuProdutos = new javax.swing.JMenu();
+        jMenuItemAdicionarProduto = new javax.swing.JMenuItem();
+        jMenuItemEditarProduto = new javax.swing.JMenuItem();
+        jMenuItemListaProduto = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Loja");
@@ -56,125 +56,130 @@ public class TelaInicio extends javax.swing.JFrame {
             .addGap(0, 579, Short.MAX_VALUE)
         );
 
-        jMenu1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons 1/page.png"))); // NOI18N
-        jMenu1.setText("Arquivo");
+        jMenuArquivo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons 1/page.png"))); // NOI18N
+        jMenuArquivo.setText("Arquivo");
 
-        jMenuItem6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons 1/door_out.png"))); // NOI18N
-        jMenuItem6.setText("Sair");
-        jMenuItem6.addActionListener(new java.awt.event.ActionListener() {
+        jMenuItemSair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons 1/door_out.png"))); // NOI18N
+        jMenuItemSair.setText("Sair");
+        jMenuItemSair.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem6ActionPerformed(evt);
+                jMenuItemSairActionPerformed(evt);
             }
         });
-        jMenu1.add(jMenuItem6);
+        jMenuArquivo.add(jMenuItemSair);
 
-        jMenuBar1.add(jMenu1);
+        jMenuBar1.add(jMenuArquivo);
 
-        jMenu2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons 1/user.png"))); // NOI18N
-        jMenu2.setText("Cliente");
+        jMenuCliente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons 1/user.png"))); // NOI18N
+        jMenuCliente.setText("Cliente");
 
-        jMenuItem3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons 1/user_add.png"))); // NOI18N
-        jMenuItem3.setText("Novo");
-        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+        jMenuItemNovoCliente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons 1/user_add.png"))); // NOI18N
+        jMenuItemNovoCliente.setText("Novo");
+        jMenuItemNovoCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem3ActionPerformed(evt);
+                jMenuItemNovoClienteActionPerformed(evt);
             }
         });
-        jMenu2.add(jMenuItem3);
+        jMenuCliente.add(jMenuItemNovoCliente);
 
-        jMenuItem4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons 1/user_edit.png"))); // NOI18N
-        jMenuItem4.setText("Editar");
-        jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
+        jMenuItemEdutarCliente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons 1/user_edit.png"))); // NOI18N
+        jMenuItemEdutarCliente.setText("Editar");
+        jMenuItemEdutarCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem4ActionPerformed(evt);
+                jMenuItemEdutarClienteActionPerformed(evt);
             }
         });
-        jMenu2.add(jMenuItem4);
+        jMenuCliente.add(jMenuItemEdutarCliente);
 
-        jMenuItem10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons 1/user_go.png"))); // NOI18N
-        jMenuItem10.setText("Lista");
-        jMenuItem10.addActionListener(new java.awt.event.ActionListener() {
+        jMenuItemListaCliente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons 1/user_go.png"))); // NOI18N
+        jMenuItemListaCliente.setText("Lista");
+        jMenuItemListaCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem10ActionPerformed(evt);
+                jMenuItemListaClienteActionPerformed(evt);
             }
         });
-        jMenu2.add(jMenuItem10);
+        jMenuCliente.add(jMenuItemListaCliente);
 
-        jMenuBar1.add(jMenu2);
+        jMenuBar1.add(jMenuCliente);
 
-        jMenu3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons 1/cart.png"))); // NOI18N
-        jMenu3.setText("Venda");
-        jMenu3.addActionListener(new java.awt.event.ActionListener() {
+        jMenuVenda.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons 1/cart.png"))); // NOI18N
+        jMenuVenda.setText("Venda");
+        jMenuVenda.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenu3ActionPerformed(evt);
-            }
-        });
-
-        jMenuItem1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons 1/cart_add.png"))); // NOI18N
-        jMenuItem1.setText("Novo");
-        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem1ActionPerformed(evt);
-            }
-        });
-        jMenu3.add(jMenuItem1);
-
-        jMenuBar1.add(jMenu3);
-
-        jMenu4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons 1/basket.png"))); // NOI18N
-        jMenu4.setText("Aluguel");
-
-        jMenuItem2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons 1/basket_add.png"))); // NOI18N
-        jMenuItem2.setText("Novo");
-        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem2ActionPerformed(evt);
-            }
-        });
-        jMenu4.add(jMenuItem2);
-
-        jMenuItem5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons 1/basket_go.png"))); // NOI18N
-        jMenuItem5.setText("Devolução");
-        jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem5ActionPerformed(evt);
-            }
-        });
-        jMenu4.add(jMenuItem5);
-
-        jMenuBar1.add(jMenu4);
-
-        jMenu5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons 1/controller.png"))); // NOI18N
-        jMenu5.setText("Produtos");
-        jMenu5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenu5ActionPerformed(evt);
+                jMenuVendaActionPerformed(evt);
             }
         });
 
-        jMenuItem7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons 1/controller_add.png"))); // NOI18N
-        jMenuItem7.setText("Adicionar");
-        jMenuItem7.addActionListener(new java.awt.event.ActionListener() {
+        jMenuItemNovaVenda.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons 1/cart_add.png"))); // NOI18N
+        jMenuItemNovaVenda.setText("Nova");
+        jMenuItemNovaVenda.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem7ActionPerformed(evt);
+                jMenuItemNovaVendaActionPerformed(evt);
             }
         });
-        jMenu5.add(jMenuItem7);
+        jMenuVenda.add(jMenuItemNovaVenda);
 
-        jMenuItem8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons 1/controller_error.png"))); // NOI18N
-        jMenuItem8.setText("Editar");
-        jMenu5.add(jMenuItem8);
+        jMenuBar1.add(jMenuVenda);
 
-        jMenuItem9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons 1/controller.png"))); // NOI18N
-        jMenuItem9.setText("Lista");
-        jMenuItem9.addActionListener(new java.awt.event.ActionListener() {
+        jMenuAluguel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons 1/basket.png"))); // NOI18N
+        jMenuAluguel.setText("Aluguel");
+
+        jMenuItemNovoAluguel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons 1/basket_add.png"))); // NOI18N
+        jMenuItemNovoAluguel.setText("Novo");
+        jMenuItemNovoAluguel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem9ActionPerformed(evt);
+                jMenuItemNovoAluguelActionPerformed(evt);
             }
         });
-        jMenu5.add(jMenuItem9);
+        jMenuAluguel.add(jMenuItemNovoAluguel);
 
-        jMenuBar1.add(jMenu5);
+        jMenuItemDevolucao.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons 1/basket_go.png"))); // NOI18N
+        jMenuItemDevolucao.setText("Devolução");
+        jMenuItemDevolucao.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemDevolucaoActionPerformed(evt);
+            }
+        });
+        jMenuAluguel.add(jMenuItemDevolucao);
+
+        jMenuBar1.add(jMenuAluguel);
+
+        jMenuProdutos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons 1/controller.png"))); // NOI18N
+        jMenuProdutos.setText("Produtos");
+        jMenuProdutos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuProdutosActionPerformed(evt);
+            }
+        });
+
+        jMenuItemAdicionarProduto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons 1/controller_add.png"))); // NOI18N
+        jMenuItemAdicionarProduto.setText("Adicionar");
+        jMenuItemAdicionarProduto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemAdicionarProdutoActionPerformed(evt);
+            }
+        });
+        jMenuProdutos.add(jMenuItemAdicionarProduto);
+
+        jMenuItemEditarProduto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons 1/controller_error.png"))); // NOI18N
+        jMenuItemEditarProduto.setText("Editar");
+        jMenuItemEditarProduto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemEditarProdutoActionPerformed(evt);
+            }
+        });
+        jMenuProdutos.add(jMenuItemEditarProduto);
+
+        jMenuItemListaProduto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons 1/controller.png"))); // NOI18N
+        jMenuItemListaProduto.setText("Lista");
+        jMenuItemListaProduto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemListaProdutoActionPerformed(evt);
+            }
+        });
+        jMenuProdutos.add(jMenuItemListaProduto);
+
+        jMenuBar1.add(jMenuProdutos);
 
         setJMenuBar(jMenuBar1);
 
@@ -192,7 +197,7 @@ public class TelaInicio extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+    private void jMenuItemNovaVendaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemNovaVendaActionPerformed
         disposeAll();
         TelaNovoVenda venda = new TelaNovoVenda();
         jDesktopPane1.add(venda);
@@ -202,9 +207,9 @@ public class TelaInicio extends javax.swing.JFrame {
             Logger.getLogger(TelaInicio.class.getName()).log(Level.SEVERE, null, ex);
         }
         venda.setVisible(true);
-    }//GEN-LAST:event_jMenuItem1ActionPerformed
+    }//GEN-LAST:event_jMenuItemNovaVendaActionPerformed
 
-    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+    private void jMenuItemNovoAluguelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemNovoAluguelActionPerformed
         disposeAll();
         TelaNovoAluguel aluguel = new TelaNovoAluguel();
         jDesktopPane1.add(aluguel);
@@ -214,17 +219,17 @@ public class TelaInicio extends javax.swing.JFrame {
             Logger.getLogger(TelaInicio.class.getName()).log(Level.SEVERE, null, ex);
         }
         aluguel.setVisible(true);
-    }//GEN-LAST:event_jMenuItem2ActionPerformed
+    }//GEN-LAST:event_jMenuItemNovoAluguelActionPerformed
 
-    private void jMenu3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu3ActionPerformed
+    private void jMenuVendaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuVendaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jMenu3ActionPerformed
+    }//GEN-LAST:event_jMenuVendaActionPerformed
 
-    private void jMenu5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu5ActionPerformed
+    private void jMenuProdutosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuProdutosActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jMenu5ActionPerformed
+    }//GEN-LAST:event_jMenuProdutosActionPerformed
 
-    private void jMenuItem7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem7ActionPerformed
+    private void jMenuItemAdicionarProdutoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemAdicionarProdutoActionPerformed
         disposeAll();
         TelaNovoProduto prod = new TelaNovoProduto();
         jDesktopPane1.add(prod);
@@ -234,9 +239,9 @@ public class TelaInicio extends javax.swing.JFrame {
             Logger.getLogger(TelaInicio.class.getName()).log(Level.SEVERE, null, ex);
         }
         prod.setVisible(true);
-    }//GEN-LAST:event_jMenuItem7ActionPerformed
+    }//GEN-LAST:event_jMenuItemAdicionarProdutoActionPerformed
 
-    private void jMenuItem9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem9ActionPerformed
+    private void jMenuItemListaProdutoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemListaProdutoActionPerformed
         disposeAll();
         TelaListaProduto lista = new TelaListaProduto();
         jDesktopPane1.add(lista);
@@ -246,9 +251,9 @@ public class TelaInicio extends javax.swing.JFrame {
             Logger.getLogger(TelaInicio.class.getName()).log(Level.SEVERE, null, ex);
         }
         lista.setVisible(true);
-    }//GEN-LAST:event_jMenuItem9ActionPerformed
+    }//GEN-LAST:event_jMenuItemListaProdutoActionPerformed
 
-    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
+    private void jMenuItemNovoClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemNovoClienteActionPerformed
         disposeAll();
         TelaNovoCliente cliente = new TelaNovoCliente();
         jDesktopPane1.add(cliente);
@@ -258,9 +263,9 @@ public class TelaInicio extends javax.swing.JFrame {
             Logger.getLogger(TelaInicio.class.getName()).log(Level.SEVERE, null, ex);
         }
         cliente.setVisible(true);
-    }//GEN-LAST:event_jMenuItem3ActionPerformed
+    }//GEN-LAST:event_jMenuItemNovoClienteActionPerformed
 
-    private void jMenuItem10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem10ActionPerformed
+    private void jMenuItemListaClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemListaClienteActionPerformed
         disposeAll();
         TelaListaCliente lista = new TelaListaCliente();
         jDesktopPane1.add(lista);
@@ -270,9 +275,10 @@ public class TelaInicio extends javax.swing.JFrame {
             Logger.getLogger(TelaInicio.class.getName()).log(Level.SEVERE, null, ex);
         }
         lista.setVisible(true);
-    }//GEN-LAST:event_jMenuItem10ActionPerformed
+    }//GEN-LAST:event_jMenuItemListaClienteActionPerformed
 
-    private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
+    private void jMenuItemDevolucaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemDevolucaoActionPerformed
+        disposeAll();
         //Dialogo para escolher aluguel
         Icon figura = new ImageIcon(getToolkit().createImage(getClass().getResource("/icons 1/basket_go.png")));
         Object[] possibilities = Aluguel.toObject();
@@ -293,11 +299,12 @@ public class TelaInicio extends javax.swing.JFrame {
                 index = i;
             }
         }
-    }//GEN-LAST:event_jMenuItem5ActionPerformed
+    }//GEN-LAST:event_jMenuItemDevolucaoActionPerformed
 
-    private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
-        // TODO add your handling code here:
-        Icon figura = new ImageIcon(getToolkit().createImage(getClass().getResource("/icons 1/basket_go.png")));
+    private void jMenuItemEdutarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemEdutarClienteActionPerformed
+        disposeAll();
+        // Dialogo para escolher cliente
+        Icon figura = new ImageIcon(getToolkit().createImage(getClass().getResource("/icons 1/user_edit.png")));
         Object[] possibilities = Cliente.toObject();
         String s;
         s = (String) JOptionPane.showInputDialog(
@@ -308,12 +315,27 @@ public class TelaInicio extends javax.swing.JFrame {
                 figura,
                 possibilities,
                 "");
-    }//GEN-LAST:event_jMenuItem4ActionPerformed
+    }//GEN-LAST:event_jMenuItemEdutarClienteActionPerformed
 
-    private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
-
+    private void jMenuItemSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemSairActionPerformed
         System.exit(0);
-    }//GEN-LAST:event_jMenuItem6ActionPerformed
+    }//GEN-LAST:event_jMenuItemSairActionPerformed
+
+    private void jMenuItemEditarProdutoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemEditarProdutoActionPerformed
+        disposeAll();
+        // Dialogo para escolher produto
+        Icon figura = new ImageIcon(getToolkit().createImage(getClass().getResource("/icons 1/controller_error.png")));
+        Object[] possibilities = Produto.toObject();
+        String s;
+        s = (String) JOptionPane.showInputDialog(
+                this,
+                "Escolha o produto:",
+                "Editar Produto",
+                JOptionPane.PLAIN_MESSAGE,
+                figura,
+                possibilities,
+                "");
+    }//GEN-LAST:event_jMenuItemEditarProdutoActionPerformed
 
     private void disposeAll() {
         JInternalFrame[] frames = jDesktopPane1.getAllFrames();
@@ -356,21 +378,21 @@ public class TelaInicio extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JDesktopPane jDesktopPane1;
-    private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu2;
-    private javax.swing.JMenu jMenu3;
-    private javax.swing.JMenu jMenu4;
-    private javax.swing.JMenu jMenu5;
+    private javax.swing.JMenu jMenuAluguel;
+    private javax.swing.JMenu jMenuArquivo;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem10;
-    private javax.swing.JMenuItem jMenuItem2;
-    private javax.swing.JMenuItem jMenuItem3;
-    private javax.swing.JMenuItem jMenuItem4;
-    private javax.swing.JMenuItem jMenuItem5;
-    private javax.swing.JMenuItem jMenuItem6;
-    private javax.swing.JMenuItem jMenuItem7;
-    private javax.swing.JMenuItem jMenuItem8;
-    private javax.swing.JMenuItem jMenuItem9;
+    private javax.swing.JMenu jMenuCliente;
+    private javax.swing.JMenuItem jMenuItemAdicionarProduto;
+    private javax.swing.JMenuItem jMenuItemDevolucao;
+    private javax.swing.JMenuItem jMenuItemEditarProduto;
+    private javax.swing.JMenuItem jMenuItemEdutarCliente;
+    private javax.swing.JMenuItem jMenuItemListaCliente;
+    private javax.swing.JMenuItem jMenuItemListaProduto;
+    private javax.swing.JMenuItem jMenuItemNovaVenda;
+    private javax.swing.JMenuItem jMenuItemNovoAluguel;
+    private javax.swing.JMenuItem jMenuItemNovoCliente;
+    private javax.swing.JMenuItem jMenuItemSair;
+    private javax.swing.JMenu jMenuProdutos;
+    private javax.swing.JMenu jMenuVenda;
     // End of variables declaration//GEN-END:variables
 }

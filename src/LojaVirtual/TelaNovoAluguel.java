@@ -21,7 +21,7 @@ public class TelaNovoAluguel extends javax.swing.JInternalFrame {
         jLabel1 = new javax.swing.JLabel();
         jComboBox1 = new javax.swing.JComboBox(Cliente.toObject());
         jLabel2 = new javax.swing.JLabel();
-        jComboBox2 = new javax.swing.JComboBox(Produto.produtosToObject());
+        jComboBox2 = new javax.swing.JComboBox(Produto.toObject());
         jLabel3 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
