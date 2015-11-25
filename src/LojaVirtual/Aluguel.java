@@ -1,7 +1,10 @@
 package LojaVirtual;
 
+import static LojaVirtual.Operacao.operacoes;
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Aluguel extends Operacao {
 
@@ -45,6 +48,18 @@ public class Aluguel extends Operacao {
         this.calcularValor();
         this.prazo = 3 + itens.size();
         Operacao.operacoes.add(this);
+    }
+
+    public static Object[] toObject() {
+        List<String> aluguel = new ArrayList<>();
+        Aluguel a = new Aluguel();
+        for (int i = 0; i < operacoes.size(); i++) {
+            if (operacoes.get(i).getClass().equals(a.getClass()) && !operacoes.get(i).isDevolvido()) {
+                aluguel.add(i + " - " + operacoes.get(i).cliente.getNome());
+            }
+        }
+        String[] alug = aluguel.toArray(new String[aluguel.size()]);
+        return alug;
     }
 
     //GETTERS

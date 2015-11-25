@@ -275,7 +275,7 @@ public class TelaInicio extends javax.swing.JFrame {
     private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
         //Dialogo para escolher aluguel
         Icon figura = new ImageIcon(getToolkit().createImage(getClass().getResource("/icons 1/basket_go.png")));
-        Object[] possibilities = Operacao.aluguelToObject();
+        Object[] possibilities = Aluguel.toObject();
         String s;
         s = (String) JOptionPane.showInputDialog(
                 this,
@@ -298,7 +298,7 @@ public class TelaInicio extends javax.swing.JFrame {
     private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
         // TODO add your handling code here:
         Icon figura = new ImageIcon(getToolkit().createImage(getClass().getResource("/icons 1/basket_go.png")));
-        Object[] possibilities = Operacao.aluguelToObject();
+        Object[] possibilities = Cliente.toObject();
         String s;
         s = (String) JOptionPane.showInputDialog(
                 this,
@@ -308,15 +308,6 @@ public class TelaInicio extends javax.swing.JFrame {
                 figura,
                 possibilities,
                 "");
-
-        //Descobrir index do aluguel no arraylist operações
-        /*int index = 0;
-         for (int i = 0; i < Operacao.operacoes.size(); i++) {
-         if (s.contains(String.valueOf(i))) {
-         index = i;
-         }
-         }*/
-
     }//GEN-LAST:event_jMenuItem4ActionPerformed
 
     private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed

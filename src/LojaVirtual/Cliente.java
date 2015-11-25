@@ -18,7 +18,7 @@ public class Cliente {
         clientes.add(this);
     }
     
-    public static Object[] clientesToObject() {
+    public static Object[] toObject() {
         Object[] cliente = new Object[clientes.size()];
         for (int i = 0; i < clientes.size(); i++) {
             cliente[i] = clientes.get(i).nome;
@@ -49,6 +49,4 @@ public class Cliente {
     public String getDataNasc() {
         return dataNasc;
     }
-    
-    
 }

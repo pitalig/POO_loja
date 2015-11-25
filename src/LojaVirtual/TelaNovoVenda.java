@@ -19,7 +19,7 @@ public class TelaNovoVenda extends javax.swing.JInternalFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox(Cliente.clientesToObject());
+        jComboBox1 = new javax.swing.JComboBox(Cliente.toObject());
         jLabel2 = new javax.swing.JLabel();
         jComboBox2 = new javax.swing.JComboBox(Produto.produtosToObject());
         jLabel3 = new javax.swing.JLabel();
