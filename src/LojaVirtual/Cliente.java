@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Cliente {
 
-    private final String nome, endereco, cep, telefone, cpf, dataNasc;
+    private String nome, endereco, cep, telefone, cpf, dataNasc;
 
     public static ArrayList<Cliente> clientes = new ArrayList<>();
 
@@ -18,7 +18,7 @@ public class Cliente {
         clientes.add(this);
     }
     
-    public static Object[] clientesToObject() {
+    public static Object[] toObject() {
         Object[] cliente = new Object[clientes.size()];
         for (int i = 0; i < clientes.size(); i++) {
             cliente[i] = clientes.get(i).nome;
@@ -26,6 +26,7 @@ public class Cliente {
         return cliente;
     }
 
+    //GETTERS
     public String getNome() {
         return nome;
     }
@@ -50,5 +51,30 @@ public class Cliente {
         return dataNasc;
     }
     
+    //SETTERS
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public void setEndereco(String endereco) {
+        this.endereco = endereco;
+    }
+
+    public void setCep(String cep) {
+        this.cep = cep;
+    }
+
+    public void setTelefone(String telefone) {
+        this.telefone = telefone;
+    }
+
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
+
+    public void setDataNasc(String dataNasc) {
+        this.dataNasc = dataNasc;
+    }
     
 }

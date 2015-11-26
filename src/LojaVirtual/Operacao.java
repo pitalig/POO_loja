@@ -45,16 +45,4 @@ public abstract class Operacao {
         Operacao.operacoes.add(this);
     }
 
-    public static Object[] aluguelToObject() {
-        List<String> aluguel = new ArrayList<>();
-        Aluguel a = new Aluguel();
-        for (int i = 0; i < operacoes.size(); i++) {
-            if (operacoes.get(i).getClass().equals(a.getClass()) && !operacoes.get(i).isDevolvido()) {
-                aluguel.add(i + " - " + operacoes.get(i).cliente.getNome());
-            }
-        }
-        String[] alug = aluguel.toArray(new String[aluguel.size()]);
-        return alug;
-    }
-
 }
