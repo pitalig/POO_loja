@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Produto {
 
-    String nome;
+    private String nome;
 
     private double valor;
 

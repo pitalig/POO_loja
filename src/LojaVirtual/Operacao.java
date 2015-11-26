@@ -34,7 +34,7 @@ public abstract class Operacao {
     public Object[] itensToObject() {
         Object[] prod = new Object[itens.size()];
         for (int i = 0; i < itens.size(); i++) {
-            prod[i] = itens.get(i).nome;
+            prod[i] = itens.get(i).getNome();
         }
         return prod;
     }

@@ -351,6 +351,21 @@ public class TelaInicio extends javax.swing.JFrame {
                 figura,
                 possibilities,
                 "");
+        Produto p = null;
+        for (Produto produto : Produto.produtos) {
+            if (s.equals(produto.getNome())) {
+                p = produto;
+            }
+        }
+        disposeAll();
+        TelaEditarProduto tela = new TelaEditarProduto(p);
+        jDesktopPane1.add(tela);
+        try {
+            tela.setMaximum(true);
+        } catch (PropertyVetoException ex) {
+            Logger.getLogger(TelaInicio.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        tela.setVisible(true);
     }//GEN-LAST:event_jMenuItemEditarProdutoActionPerformed
 
     private void disposeAll() {
