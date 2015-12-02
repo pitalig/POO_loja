@@ -1,6 +1,7 @@
 package LojaVirtual;
 
 import java.beans.PropertyVetoException;
+import java.time.LocalDate;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.Icon;
@@ -10,10 +11,11 @@ import javax.swing.JOptionPane;
 
 public class TelaInicio extends javax.swing.JFrame {
 
-    Produto p1 = new Produto("1", 10.99);
-    Produto p2 = new Produto("2", 160.50);
-    Produto p3 = new Produto("3", 1.99);
-    Cliente c1 = new Cliente("João", "Avenida dos Estados, 19745, São Paulo - SP0000000000000000000000000000000000000000", "02113500", "11999558877", "98758936584", "29051990");
+    Produto p1 = new Produto("1", 10.99, 300);
+    Produto p2 = new Produto("2", 160.50, 50);
+    Produto p3 = new Produto("3", 1.99, 100);
+    Cliente c1 = new Cliente("João", "Avenida dos Estados, 19745, São Paulo - SP", "02113500", "11999558877", "98758936584", "29051990");
+    Aluguel a1 = new Aluguel(LocalDate.of(2015, 11, 1), c1, p3, p3, p3);
 
     public TelaInicio() {
         initComponents();
@@ -44,6 +46,7 @@ public class TelaInicio extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Loja");
+        setResizable(false);
 
         javax.swing.GroupLayout jDesktopPane1Layout = new javax.swing.GroupLayout(jDesktopPane1);
         jDesktopPane1.setLayout(jDesktopPane1Layout);
@@ -104,11 +107,6 @@ public class TelaInicio extends javax.swing.JFrame {
 
         jMenuVenda.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons 1/cart.png"))); // NOI18N
         jMenuVenda.setText("Venda");
-        jMenuVenda.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuVendaActionPerformed(evt);
-            }
-        });
 
         jMenuItemNovaVenda.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons 1/cart_add.png"))); // NOI18N
         jMenuItemNovaVenda.setText("Nova");
@@ -146,11 +144,6 @@ public class TelaInicio extends javax.swing.JFrame {
 
         jMenuProdutos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons 1/controller.png"))); // NOI18N
         jMenuProdutos.setText("Produtos");
-        jMenuProdutos.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuProdutosActionPerformed(evt);
-            }
-        });
 
         jMenuItemAdicionarProduto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons 1/controller_add.png"))); // NOI18N
         jMenuItemAdicionarProduto.setText("Adicionar");
@@ -221,14 +214,6 @@ public class TelaInicio extends javax.swing.JFrame {
         tela.setVisible(true);
     }//GEN-LAST:event_jMenuItemNovoAluguelActionPerformed
 
-    private void jMenuVendaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuVendaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuVendaActionPerformed
-
-    private void jMenuProdutosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuProdutosActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuProdutosActionPerformed
-
     private void jMenuItemAdicionarProdutoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemAdicionarProdutoActionPerformed
         disposeAll();
         TelaNovoProduto tela = new TelaNovoProduto();
@@ -293,11 +278,27 @@ public class TelaInicio extends javax.swing.JFrame {
                 "");
 
         //Pegar aluguel no arraylist operações
-        Aluguel a;
+        Aluguel a = null;
         for (int i = 0; i < Operacao.operacoes.size(); i++) {
             if (s.contains(String.valueOf(i))) {
                 a = (Aluguel) Operacao.operacoes.get(i);
             }
+        }
+
+        //Devolver
+        double multa = a.devolver();
+
+        //Mensagem
+        if (multa > 0) {
+            JOptionPane.showMessageDialog(this,
+                    "Produtos devolvidos com atraso. Taxa extra: R$" + String.format("%.2f", multa),
+                    "Devolução",
+                    JOptionPane.PLAIN_MESSAGE);
+        } else {
+            JOptionPane.showMessageDialog(this,
+                    "Produtos devolvidos.",
+                    "Devolução",
+                    JOptionPane.PLAIN_MESSAGE);
         }
     }//GEN-LAST:event_jMenuItemDevolucaoActionPerformed
 

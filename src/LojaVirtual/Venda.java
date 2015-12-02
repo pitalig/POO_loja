@@ -18,12 +18,12 @@ public class Venda extends Operacao {
     }
 
     @Override
-    public String getPrazo() {
-        throw new UnsupportedOperationException("Not supported yet.");
+    public String getPrazoValor() {
+        return "O valor total é: R$" + String.format("%.2f", valor);
     }
 
     @Override
     public boolean isDevolvido() {
-        throw new UnsupportedOperationException("Not supported yet.");
+        throw new UnsupportedOperationException("");
     }
 }

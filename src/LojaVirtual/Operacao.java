@@ -15,7 +15,7 @@ public abstract class Operacao {
 
     public abstract String mostrarPedido();
 
-    public abstract String getPrazo();
+    public abstract String getPrazoValor();
 
     public abstract boolean isDevolvido();
 

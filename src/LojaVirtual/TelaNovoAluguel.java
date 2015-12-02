@@ -63,14 +63,14 @@ public class TelaNovoAluguel extends javax.swing.JInternalFrame {
 
             },
             new String [] {
-                "Nome", "Quantidade", "Valor"
+                "Nome", "Valor"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.String.class
+                java.lang.String.class, java.lang.String.class
             };
             boolean[] canEdit = new boolean [] {
-                false, false, false
+                false, false
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -86,7 +86,6 @@ public class TelaNovoAluguel extends javax.swing.JInternalFrame {
         if (jTable1.getColumnModel().getColumnCount() > 0) {
             jTable1.getColumnModel().getColumn(0).setResizable(false);
             jTable1.getColumnModel().getColumn(1).setResizable(false);
-            jTable1.getColumnModel().getColumn(2).setResizable(false);
         }
 
         jButton3.setText("Finalizar");
@@ -152,12 +151,19 @@ public class TelaNovoAluguel extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        a.addProduto(Produto.produtos.get(jComboBox2.getSelectedIndex())); //adiciona o item no arraylist itens
-        Produto it = a.itens.get(a.itens.size() - 1);
-        //adicionar na tabela:
-        DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
-        String[] iten = {it.getNome(), "1", "R$" + it.getValor()};
-        model.addRow(iten);
+        if (Produto.produtos.get(jComboBox2.getSelectedIndex()).possuiEstoque()) {
+            a.addProduto(Produto.produtos.get(jComboBox2.getSelectedIndex())); //adiciona o item no arraylist itens
+            Produto it = a.itens.get(a.itens.size() - 1);
+            //adicionar na tabela:
+            DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
+            String[] iten = {it.getNome(), "R$" + it.getValor()};
+            model.addRow(iten);
+        } else {
+            JOptionPane.showMessageDialog(this,
+                    "Sem estoque.",
+                    "Produto indisponível",
+                    JOptionPane.WARNING_MESSAGE);
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -170,9 +176,10 @@ public class TelaNovoAluguel extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        a.calcularValor();
         a.salvar(Cliente.clientes.get(jComboBox1.getSelectedIndex()));
         JOptionPane.showMessageDialog(this,
-                Operacao.operacoes.get(Operacao.operacoes.size() - 1).getPrazo(),
+                Operacao.operacoes.get(Operacao.operacoes.size() - 1).getPrazoValor(),
                 "Aluguel concluido",
                 JOptionPane.PLAIN_MESSAGE);
         try {

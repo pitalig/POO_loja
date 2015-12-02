@@ -57,6 +57,10 @@ public class Produto {
     public int getQuantidadeEstoque() {
         return quantidadeEstoque;
     }
+    
+    public boolean possuiEstoque() {
+        return quantidadeEstoque > 0;
+    }
 
     //SETTERS
     public void setNome(String nome) {
