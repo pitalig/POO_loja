@@ -177,7 +177,6 @@ public class TelaNovoVenda extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        v1.calcularValor();
         v1.salvar(Cliente.clientes.get(jComboBox1.getSelectedIndex()));
         JOptionPane.showMessageDialog(this,
                 Operacao.operacoes.get(Operacao.operacoes.size() - 1).getPrazoValor(),
