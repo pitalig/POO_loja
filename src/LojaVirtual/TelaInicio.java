@@ -10,10 +10,21 @@ import javax.swing.JOptionPane;
 
 public class TelaInicio extends javax.swing.JFrame {
 
-    Produto p1 = new Produto("1", 10.99);
-    Produto p2 = new Produto("2", 160.50);
-    Produto p3 = new Produto("3", 1.99);
+    Produto p1 = new Produto("Fifa - 2014", 110.99, 100);
+    Produto p2 = new Produto("Fifa - 2015", 160.50, 120);
+    Produto p3 = new Produto("Mortal Kombat", 150.99, 110);
+    Produto p4 = new Produto("The Last of Us", 150.99, 180);
+    Produto p5 = new Produto("Halo", 170.99, 90);
+    Produto p6 = new Produto("Call of Duty", 130.99, 70);
+    Produto p7 = new Produto("Battlefield", 145.99, 12);
+    Produto p8 = new Produto("Diablo", 120.99, 40);
+    Produto p9 = new Produto("Fifa - 2016", 200.99, 37);
+    Produto p10 = new Produto("Street Fighter", 70.99, 5);
     Cliente c1 = new Cliente("João", "Avenida dos Estados, 19745, São Paulo - SP0000000000000000000000000000000000000000", "02113500", "11999558877", "98758936584", "29051990");
+    Cliente c2 = new Cliente("Pedro", "Rua Japão, 413, Santo André", "09240170", "11997139957", "98758936584", "05121987");
+    Cliente c3 = new Cliente("Maria", "Rua Germânia, 302, Santo André", "09260250", "11997413659", "98758936584", "13081992");
+    Cliente c4 = new Cliente("Ricardo", "Rua Espanha, 81, Santo André", "09210010", "11998348541", "98758936584", "18011989");
+    Cliente c5 = new Cliente("Gabriel", "Rua Bélgica, 702, Santo André", "09210030", "11996275445", "98758936584", "16041980");
 
     public TelaInicio() {
         initComponents();
