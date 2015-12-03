@@ -13,8 +13,6 @@ public abstract class Operacao {
 
     protected double valor;
 
-    public abstract String mostrarPedido();
-
     public abstract String getPrazoValor();
 
     public abstract boolean isDevolvido();

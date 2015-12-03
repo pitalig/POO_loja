@@ -46,11 +46,6 @@ public class Aluguel extends Operacao {
         }
     }
 
-    @Override
-    public String mostrarPedido() {
-        return "Aluguel{" + "prazo=" + prazo + ", valor=" + valor + ", dataRetirada=" + dataRetirada + ", dataDevolucao=" + dataDevolucao + ", diasAlugado=" + diasAlugado + '}';
-    }
-
     public double devolver() {
         devolvido = true;
         dataDevolucao = LocalDate.now();

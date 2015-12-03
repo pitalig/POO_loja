@@ -13,11 +13,6 @@ public class Venda extends Operacao {
     }
 
     @Override
-    public String mostrarPedido() {
-        return null;
-    }
-
-    @Override
     public String getPrazoValor() {
         return "O valor total é: R$" + String.format("%.2f", valor);
     }
