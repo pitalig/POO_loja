@@ -48,7 +48,7 @@ public class TelaListaCliente extends javax.swing.JInternalFrame {
         jTable1 = new javax.swing.JTable();
 
         setClosable(true);
-        setTitle("Produtos");
+        setTitle("Clientes");
         setMaximumSize(getPreferredSize());
         setPreferredSize(new java.awt.Dimension(700, 500));
 

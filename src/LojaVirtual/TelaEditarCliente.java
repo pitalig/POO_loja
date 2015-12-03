@@ -33,6 +33,7 @@ public class TelaEditarCliente extends javax.swing.JInternalFrame {
         jButton1 = new javax.swing.JButton();
 
         setClosable(true);
+        setTitle("Editar Cliente");
         setMaximumSize(getPreferredSize());
 
         jLabel1.setText("Nome");

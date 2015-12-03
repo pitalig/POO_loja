@@ -30,6 +30,7 @@ public class TelaNovoCliente extends javax.swing.JInternalFrame {
         jButton1 = new javax.swing.JButton();
 
         setClosable(true);
+        setTitle("Novo Cliente");
         setMaximumSize(getPreferredSize());
 
         jLabel1.setText("Nome");

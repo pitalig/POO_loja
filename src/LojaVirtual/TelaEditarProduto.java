@@ -29,7 +29,7 @@ public class TelaEditarProduto extends javax.swing.JInternalFrame {
         setBorder(null);
         setClosable(true);
         setMaximizable(true);
-        setTitle("Novo Produto");
+        setTitle("Editar Produto");
         setMaximumSize(getPreferredSize());
 
         jLabel1.setText("Nome:");

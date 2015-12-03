@@ -32,7 +32,7 @@ public class TelaNovoAluguel extends javax.swing.JInternalFrame {
         setBorder(null);
         setClosable(true);
         setMaximizable(true);
-        setTitle("Nova venda");
+        setTitle("Novo Aluguel");
         setMaximumSize(getPreferredSize());
         setPreferredSize(new java.awt.Dimension(700, 500));
 
